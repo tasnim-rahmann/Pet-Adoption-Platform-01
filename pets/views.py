@@ -3,8 +3,12 @@ from pets.models import Pet, Category
 from pets.serializers import PetSerializer, CategorySerializer
 
 class PetViewSet(ModelViewSet):
-    queryset = Pet.objects.all()
     serializer_class = PetSerializer
+    def get_queryset(self):
+        category_id = self.kwargs.get('category_pk')
+        if category_id:
+            return Pet.objects.filter(category_id=category_id)
+        return Pet.objects.all()
 
 class CategoryViewSet(ModelViewSet):
     queryset = Category.objects.all()
