@@ -1,0 +1,82 @@
+[
+  {
+    "model": "pets.category",
+    "pk": 1,
+    "fields": {"name": "Dogs", "description": "All kinds of dogs"}
+  },
+  {
+    "model": "pets.category",
+    "pk": 2,
+    "fields": {"name": "Cats", "description": "All kinds of cats"}
+  },
+  {
+    "model": "pets.category",
+    "pk": 3,
+    "fields": {"name": "Birds", "description": "Different types of birds"}
+  },
+  {
+    "model": "pets.category",
+    "pk": 4,
+    "fields": {"name": "Rabbits", "description": "Cute and fluffy rabbits"}
+  },
+  {
+    "model": "pets.category",
+    "pk": 5,
+    "fields": {"name": "Reptiles", "description": "Snakes, lizards, and more"}
+  },
+
+  {"model": "pets.pet", "pk": 1, "fields": {"name": "Dog1", "age": 2, "breed": "Breed1", "availability": true, "category": 1, "description": "Friendly dog", "image": null}},
+  {"model": "pets.pet", "pk": 2, "fields": {"name": "Dog2", "age": 3, "breed": "Breed2", "availability": true, "category": 1, "description": "Playful dog", "image": null}},
+  {"model": "pets.pet", "pk": 3, "fields": {"name": "Dog3", "age": 1, "breed": "Breed3", "availability": true, "category": 1, "description": "Cute dog", "image": null}},
+  {"model": "pets.pet", "pk": 4, "fields": {"name": "Dog4", "age": 4, "breed": "Breed4", "availability": true, "category": 1, "description": "Loyal dog", "image": null}},
+  {"model": "pets.pet", "pk": 5, "fields": {"name": "Dog5", "age": 2, "breed": "Breed5", "availability": true, "category": 1, "description": "Active dog", "image": null}},
+  {"model": "pets.pet", "pk": 6, "fields": {"name": "Dog6", "age": 5, "breed": "Breed6", "availability": true, "category": 1, "description": "Smart dog", "image": null}},
+  {"model": "pets.pet", "pk": 7, "fields": {"name": "Dog7", "age": 3, "breed": "Breed7", "availability": true, "category": 1, "description": "Gentle dog", "image": null}},
+  {"model": "pets.pet", "pk": 8, "fields": {"name": "Dog8", "age": 1, "breed": "Breed8", "availability": true, "category": 1, "description": "Happy dog", "image": null}},
+  {"model": "pets.pet", "pk": 9, "fields": {"name": "Dog9", "age": 2, "breed": "Breed9", "availability": true, "category": 1, "description": "Friendly dog", "image": null}},
+  {"model": "pets.pet", "pk": 10, "fields": {"name": "Dog10", "age": 4, "breed": "Breed10", "availability": true, "category": 1, "description": "Loyal dog", "image": null}},
+
+  {"model": "pets.pet", "pk": 11, "fields": {"name": "Cat1", "age": 2, "breed": "Breed1", "availability": true, "category": 2, "description": "Playful cat", "image": null}},
+  {"model": "pets.pet", "pk": 12, "fields": {"name": "Cat2", "age": 3, "breed": "Breed2", "availability": true, "category": 2, "description": "Curious cat", "image": null}},
+  {"model": "pets.pet", "pk": 13, "fields": {"name": "Cat3", "age": 1, "breed": "Breed3", "availability": true, "category": 2, "description": "Cute cat", "image": null}},
+  {"model": "pets.pet", "pk": 14, "fields": {"name": "Cat4", "age": 4, "breed": "Breed4", "availability": true, "category": 2, "description": "Lazy cat", "image": null}},
+  {"model": "pets.pet", "pk": 15, "fields": {"name": "Cat5", "age": 2, "breed": "Breed5", "availability": true, "category": 2, "description": "Affectionate cat", "image": null}},
+  {"model": "pets.pet", "pk": 16, "fields": {"name": "Cat6", "age": 5, "breed": "Breed6", "availability": true, "category": 2, "description": "Smart cat", "image": null}},
+  {"model": "pets.pet", "pk": 17, "fields": {"name": "Cat7", "age": 3, "breed": "Breed7", "availability": true, "category": 2, "description": "Gentle cat", "image": null}},
+  {"model": "pets.pet", "pk": 18, "fields": {"name": "Cat8", "age": 1, "breed": "Breed8", "availability": true, "category": 2, "description": "Happy cat", "image": null}},
+  {"model": "pets.pet", "pk": 19, "fields": {"name": "Cat9", "age": 2, "breed": "Breed9", "availability": true, "category": 2, "description": "Playful cat", "image": null}},
+  {"model": "pets.pet", "pk": 20, "fields": {"name": "Cat10", "age": 4, "breed": "Breed10", "availability": true, "category": 2, "description": "Friendly cat", "image": null}},
+
+  {"model": "pets.pet", "pk": 21, "fields": {"name": "Bird1", "age": 1, "breed": "Canary", "availability": true, "category": 3, "description": "Sings well", "image": null}},
+  {"model": "pets.pet", "pk": 22, "fields": {"name": "Bird2", "age": 2, "breed": "Parrot", "availability": true, "category": 3, "description": "Colorful", "image": null}},
+  {"model": "pets.pet", "pk": 23, "fields": {"name": "Bird3", "age": 1, "breed": "Sparrow", "availability": true, "category": 3, "description": "Small and cute", "image": null}},
+  {"model": "pets.pet", "pk": 24, "fields": {"name": "Bird4", "age": 3, "breed": "Finch", "availability": true, "category": 3, "description": "Friendly", "image": null}},
+  {"model": "pets.pet", "pk": 25, "fields": {"name": "Bird5", "age": 2, "breed": "Cockatiel", "availability": true, "category": 3, "description": "Talkative", "image": null}},
+  {"model": "pets.pet", "pk": 26, "fields": {"name": "Bird6", "age": 3, "breed": "Lovebird", "availability": true, "category": 3, "description": "Playful", "image": null}},
+  {"model": "pets.pet", "pk": 27, "fields": {"name": "Bird7", "age": 1, "breed": "Macaw", "availability": true, "category": 3, "description": "Colorful", "image": null}},
+  {"model": "pets.pet", "pk": 28, "fields": {"name": "Bird8", "age": 2, "breed": "Budgie", "availability": true, "category": 3, "description": "Chirpy", "image": null}},
+  {"model": "pets.pet", "pk": 29, "fields": {"name": "Bird9", "age": 1, "breed": "Canary", "availability": true, "category": 3, "description": "Sings well", "image": null}},
+  {"model": "pets.pet", "pk": 30, "fields": {"name": "Bird10", "age": 3, "breed": "Finch", "availability": true, "category": 3, "description": "Friendly", "image": null}},
+
+  {"model": "pets.pet", "pk": 31, "fields": {"name": "Rabbit1", "age": 1, "breed": "Breed1", "availability": true, "category": 4, "description": "Cute rabbit", "image": null}},
+  {"model": "pets.pet", "pk": 32, "fields": {"name": "Rabbit2", "age": 2, "breed": "Breed2", "availability": true, "category": 4, "description": "Fluffy rabbit", "image": null}},
+  {"model": "pets.pet", "pk": 33, "fields": {"name": "Rabbit3", "age": 1, "breed": "Breed3", "availability": true, "category": 4, "description": "Friendly rabbit", "image": null}},
+  {"model": "pets.pet", "pk": 34, "fields": {"name": "Rabbit4", "age": 3, "breed": "Breed4", "availability": true, "category": 4, "description": "Playful rabbit", "image": null}},
+  {"model": "pets.pet", "pk": 35, "fields": {"name": "Rabbit5", "age": 2, "breed": "Breed5", "availability": true, "category": 4, "description": "Active rabbit", "image": null}},
+  {"model": "pets.pet", "pk": 36, "fields": {"name": "Rabbit6", "age": 4, "breed": "Breed6", "availability": true, "category": 4, "description": "Gentle rabbit", "image": null}},
+  {"model": "pets.pet", "pk": 37, "fields": {"name": "Rabbit7", "age": 3, "breed": "Breed7", "availability": true, "category": 4, "description": "Happy rabbit", "image": null}},
+  {"model": "pets.pet", "pk": 38, "fields": {"name": "Rabbit8", "age": 1, "breed": "Breed8", "availability": true, "category": 4, "description": "Cute rabbit", "image": null}},
+  {"model": "pets.pet", "pk": 39, "fields": {"name": "Rabbit9", "age": 2, "breed": "Breed9", "availability": true, "category": 4, "description": "Friendly rabbit", "image": null}},
+  {"model": "pets.pet", "pk": 40, "fields": {"name": "Rabbit10", "age": 3, "breed": "Breed10", "availability": true, "category": 4, "description": "Playful rabbit", "image": null}},
+
+  {"model": "pets.pet", "pk": 41, "fields": {"name": "Reptile1", "age": 2, "breed": "Snake", "availability": true, "category": 5, "description": "Slithery reptile", "image": null}},
+  {"model": "pets.pet", "pk": 42, "fields": {"name": "Reptile2", "age": 3, "breed": "Lizard", "availability": true, "category": 5, "description": "Creepy reptile", "image": null}},
+  {"model": "pets.pet", "pk": 43, "fields": {"name": "Reptile3", "age": 1, "breed": "Gecko", "availability": true, "category": 5, "description": "Small reptile", "image": null}},
+  {"model": "pets.pet", "pk": 44, "fields": {"name": "Reptile4", "age": 2, "breed": "Iguana", "availability": true, "category": 5, "description": "Green reptile", "image": null}},
+  {"model": "pets.pet", "pk": 45, "fields": {"name": "Reptile5", "age": 3, "breed": "Chameleon", "availability": true, "category": 5, "description": "Color-changing reptile", "image": null}},
+  {"model": "pets.pet", "pk": 46, "fields": {"name": "Reptile6", "age": 2, "breed": "Turtle", "availability": true, "category": 5, "description": "Slow reptile", "image": null}},
+  {"model": "pets.pet", "pk": 47, "fields": {"name": "Reptile7", "age": 1, "breed": "Snake", "availability": true, "category": 5, "description": "Slithery reptile", "image": null}},
+  {"model": "pets.pet", "pk": 48, "fields": {"name": "Reptile8", "age": 2, "breed": "Lizard", "availability": true, "category": 5, "description": "Creepy reptile", "image": null}},
+  {"model": "pets.pet", "pk": 49, "fields": {"name": "Reptile9", "age": 3, "breed": "Gecko", "availability": true, "category": 5, "description": "Small reptile", "image": null}},
+  {"model": "pets.pet", "pk": 50, "fields": {"name": "Reptile10", "age": 2, "breed": "Iguana", "availability": true, "category": 5, "description": "Green reptile", "image": null}}
+]
