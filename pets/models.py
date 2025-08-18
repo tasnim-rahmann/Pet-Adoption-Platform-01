@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+from cloudinary.models import CloudinaryField
 
 class Category(models.Model):
     name = models.CharField(max_length=50) 
@@ -16,10 +17,14 @@ class Pet(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='pets')
     description = models.TextField(blank=True, null=True)
     price = models.PositiveIntegerField()
-    image = models.ImageField(upload_to='pets/', blank=True, null=True)
 
     def __str__(self):
         return self.name or "Unnamed Pet"
+    
+class PetImage(models.Model):
+    pet = models.ForeignKey(Pet, on_delete=models.CASCADE, related_name='images')
+    image = CloudinaryField('image')
+
     
 class Review(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)

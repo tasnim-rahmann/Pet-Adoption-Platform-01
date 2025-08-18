@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework_nested import routers
-from pets.views import PetViewSet, CategoryViewSet, ReviewViewSet
+from pets.views import PetViewSet, CategoryViewSet, ReviewViewSet, PetImageViewSet
 
 # Main routers
 router = routers.DefaultRouter()
@@ -14,6 +14,7 @@ categories_router.register('pets', PetViewSet, basename='category-pets')
 # Nested router: reviews under pets
 pet_router = routers.NestedDefaultRouter(router, 'pets', lookup='pet')  
 pet_router.register('reviews', ReviewViewSet, basename='pet-reviews')
+pet_router.register('images', PetImageViewSet, 'pet-images')
 
 
 urlpatterns = [

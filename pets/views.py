@@ -1,20 +1,31 @@
 from rest_framework.viewsets import ModelViewSet
-from pets.models import Pet, Category, Review
-from pets.serializers import PetSerializer, CategorySerializer, ReviewSerializer
+from pets.models import Pet, Category, Review, PetImage
+from pets.serializers import PetSerializer, CategorySerializer, ReviewSerializer, PetImageSerializer
 from pets.paginations import DefaultPagination
 from django_filters.rest_framework import DjangoFilterBackend
 from pets.filters import PetFilter
 from rest_framework.filters import SearchFilter, OrderingFilter
+from django.shortcuts import get_object_or_404
 
+
+class PetImageViewSet(ModelViewSet):
+    serializer_class = PetImageSerializer
+
+    def get_queryset(self):
+        pet_id = self.kwargs.get('pet_pk')  # assuming nested router
+        return PetImage.objects.filter(pet_id=pet_id)
+
+    def perform_create(self, serializer):
+        pet_id = self.kwargs.get('pet_pk')
+        pet = get_object_or_404(Pet, pk=pet_id)
+        serializer.save(pet=pet)
 
 class PetViewSet(ModelViewSet):
     serializer_class = PetSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_class = PetFilter
     pagination_class = DefaultPagination
-    
     ordering_fields = ['price']
-    ordering = ['price']
     search_fields = ['name', 'description']
 
     def get_queryset(self):
@@ -34,4 +45,6 @@ class ReviewViewSet(ModelViewSet):
 
     def perform_create(self, serializer):
         pet_id = self.kwargs.get('pet_pk')
+        if pet_id is None:
+            pet_id = self.request.data.get('pet')
         serializer.save(user=self.request.user, pet_id=pet_id)
