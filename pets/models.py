@@ -14,6 +14,7 @@ class Pet(models.Model):
     availability = models.BooleanField(default=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='pets')
     description = models.TextField(blank=True, null=True)
+    price = models.PositiveIntegerField()
     image = models.ImageField(upload_to='pets/', blank=True, null=True)
 
     def __str__(self):
