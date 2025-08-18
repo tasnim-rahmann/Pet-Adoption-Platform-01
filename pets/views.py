@@ -1,6 +1,6 @@
 from rest_framework.viewsets import ModelViewSet
-from pets.models import Pet, Category
-from pets.serializers import PetSerializer, CategorySerializer
+from pets.models import Pet, Category, Review
+from pets.serializers import PetSerializer, CategorySerializer, ReviewSerializer
 from pets.paginations import DefaultPagination
 from django_filters.rest_framework import DjangoFilterBackend
 from pets.filters import PetFilter
@@ -27,3 +27,7 @@ class PetViewSet(ModelViewSet):
 class CategoryViewSet(ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+
+class ReviewViewSet(ModelViewSet):
+    queryset = Review.objects.all()
+    serializer_class = ReviewSerializer
