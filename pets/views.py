@@ -29,5 +29,9 @@ class CategoryViewSet(ModelViewSet):
     serializer_class = CategorySerializer
 
 class ReviewViewSet(ModelViewSet):
-    queryset = Review.objects.all()
     serializer_class = ReviewSerializer
+    queryset = Review.objects.all()
+
+    def perform_create(self, serializer):
+        pet_id = self.kwargs.get('pet_pk')
+        serializer.save(user=self.request.user, pet_id=pet_id)
