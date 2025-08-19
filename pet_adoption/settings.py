@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'api',
     'pets',
     'users',
+    'order'
 ]
 
 MIDDLEWARE = [
