@@ -21,4 +21,6 @@ urlpatterns = [
     path('', include(router.urls)),
     path('', include(categories_router.urls)),
     path('', include(pet_router.urls)),
+    path('auth/', include('djoser.urls')),
+    path('auth/', include('djoser.urls.jwt')),
 ]

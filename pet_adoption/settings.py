@@ -15,6 +15,7 @@ from decouple import config
 from pathlib import Path
 from decouple import Config
 from decouple import RepositoryEnv
+from datetime import timedelta
 config = Config(RepositoryEnv('db.env'))
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -50,6 +51,7 @@ INSTALLED_APPS = [
     'drf_yasg',
     'django_filters',
     "debug_toolbar",
+    'rest_framework_simplejwt',
     'api',
     'pets',
     'users',
@@ -161,11 +163,22 @@ AUTH_USER_MODEL = 'users.User'
 
 # rest framework settings
 REST_FRAMEWORK = {
-    # Use Django's standard `django.contrib.auth` permissions,
-    # or allow read-only access for unauthenticated users.
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
+    'COERCE_DECIMAL_TO_STRING': False,
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
+
+SIMPLE_JWT = {
+    'AUTH_HEADER_TYPES': ('JWT',),
+    "ACCESS_TOKEN_LIFETIME": timedelta(days=5),
+}
+
+DJOSER = {
+    'SERIALIZERS': {
+        'user_create': 'users.serializers.UserCreateSerializer',
+        'current_user': 'users.serializers.UserSerializer'
+    },
 }
 
 
