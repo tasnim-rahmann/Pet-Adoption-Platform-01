@@ -1,4 +1,4 @@
 __pycache__
 .env
 db.env
-db.sqlite3
+db.sqlite3__pycache__/
