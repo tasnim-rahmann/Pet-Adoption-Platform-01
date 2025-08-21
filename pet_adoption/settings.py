@@ -90,7 +90,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'pet_adoption.wsgi.application'
+WSGI_APPLICATION = 'pet_adoption.wsgi.app'
 
 
 # Database
