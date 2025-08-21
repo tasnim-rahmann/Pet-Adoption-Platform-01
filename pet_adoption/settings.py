@@ -29,9 +29,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-t_$db96yp8sm6c4uu0=7pl2lzo!ghu@#=4hjtmt%3j8euhdfz7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1']
 
 
 INTERNAL_IPS = [
@@ -41,6 +41,7 @@ INTERNAL_IPS = [
 # Application definition
 
 INSTALLED_APPS = [
+    "whitenoise.runserver_nostatic",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -56,7 +57,7 @@ INSTALLED_APPS = [
     'api',
     'pets',
     'users',
-    'order'
+    'order',
 ]
 
 MIDDLEWARE = [
@@ -150,7 +151,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / "staticfiles"
-STATICFIELS_DIR = "whitenoise.storage.CompressedStaticFilesStorage"
+STATICFIELS_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 

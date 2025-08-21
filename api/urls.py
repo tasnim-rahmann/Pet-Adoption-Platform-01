@@ -1,13 +1,14 @@
 from django.urls import path, include
 from rest_framework_nested import routers
 from pets.views import PetViewSet, CategoryViewSet, ReviewViewSet, PetImageViewSet
-from order.views import CartViewSet, CartItemViewSet
+from order.views import CartViewSet, CartItemViewSet, OrderViewSet
 
 # Main routers
 router = routers.DefaultRouter()
 router.register('pets', PetViewSet, basename='pets')
 router.register('categories', CategoryViewSet, basename='categories')
 router.register('carts', CartViewSet, basename='carts')
+router.register('orders', OrderViewSet, basename='orders')
 
 # Nested router: pets under categories
 categories_router = routers.NestedDefaultRouter(router, 'categories', lookup='category')
