@@ -4,9 +4,14 @@ from pathlib import Path
 from decouple import Config
 from decouple import RepositoryEnv
 from datetime import timedelta
-config = Config(RepositoryEnv('db.env'))
+import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+if os.path.exists(BASE_DIR / "db.env"):
+    config = Config(RepositoryEnv(BASE_DIR / "db.env"))
+else:
+    from decouple import config
 
 
 SECRET_KEY = 'django-insecure-t_$db96yp8sm6c4uu0=7pl2lzo!ghu@#=4hjtmt%3j8euhdfz7'
