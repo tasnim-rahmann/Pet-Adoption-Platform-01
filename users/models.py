@@ -3,6 +3,7 @@ from django.contrib.auth.models import AbstractUser
 from users.managers import CustomUserManager
 
 class User(AbstractUser):
+    username = None
     email = models.EmailField(unique=True, blank=False, null=False)
     address = models.TextField(blank=True, null=True)
     phone_number = models.CharField(max_length=15, blank=True, null=True)
