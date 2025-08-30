@@ -87,6 +87,9 @@ class OrderViewSet(ModelViewSet):
     def get_queryset(self):
         if getattr(self, "swagger_fake_view", False) or not self.request.user.is_authenticated:
             return Order.objects.none()
+        
+        if self.request.user.is_staff:
+            return Order.objects.all()
     
         return Order.objects.prefetch_related('items__pet').filter(user=self.request.user)
 
